@@ -209,7 +209,7 @@ export default function App() {
           <AnimatedSection>
             <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/2">
-                <img src="https://media.melhoresdestinos.com.br/2019/04/alter-do-chao-noite.jpg" alt="Vista noturna de Alter do Chão" className="rounded-lg shadow-2xl w-full" />
+                <img src={`${import.meta.env.BASE_URL}alter-do-chao-para-brasil.jpg`} alt="Vista de Alter do Chão" className="rounded-lg shadow-2xl w-full" />
               </div>
               <div className="md:w-1/2">
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-blue dark:text-white mb-4">Nossa Missão é o seu Sucesso</h2>
