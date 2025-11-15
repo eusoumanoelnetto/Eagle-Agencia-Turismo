@@ -20,7 +20,8 @@ export default defineConfig(({ mode }) => {
             assetFileNames: 'assets/[name][extname]',
             manualChunks: undefined,
           }
-        }
+        },
+        sourcemap: false
       },
       plugins: [react()],
       define: {
