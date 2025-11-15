@@ -183,7 +183,7 @@ export default function App() {
               Conectando <span className="bg-gradient-to-r from-brand-gold via-yellow-400 to-brand-gold bg-clip-text text-transparent">Alter do Chão</span> ao Mundo Digital
             </h1>
             <p className="text-lg md:text-xl mb-8 font-light animate-fade-in-up">
-              Marketing digital e social media para pousadas, hotéis e ONGs que querem prosperar.
+              Mostramos a tua pousada, hotel ou restaurante de um jeito que dá vontade de arrumar as malas e vir correndo pra Alter do Chão
             </p>
             <a 
               href="#contact"
