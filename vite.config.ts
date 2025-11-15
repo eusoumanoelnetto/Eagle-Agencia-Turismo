@@ -21,7 +21,11 @@ export default defineConfig(({ mode }) => {
             manualChunks: undefined,
           }
         },
-        sourcemap: false
+        sourcemap: false,
+        target: 'es2015',
+        modulePreload: {
+          polyfill: true
+        }
       },
       plugins: [react()],
       define: {

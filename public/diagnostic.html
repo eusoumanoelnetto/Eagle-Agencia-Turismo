@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Diagnóstico - Eagle Agência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1a2a4c 0%, #c0a062 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .diagnostic-box {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        max-width: 500px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="diagnostic-box">
+      <h1 style="color: #1a2a4c; margin-bottom: 1rem;">🦅 Eagle Agência</h1>
+      <p>Teste de diagnóstico para verificar se o GitHub Pages está funcionando</p>
+      <div id="status" style="margin-top: 1rem; padding: 1rem; border-radius: 5px;">
+        <p>✅ HTML carregado com sucesso!</p>
+        <p>✅ CSS (Tailwind) carregado com sucesso!</p>
+        <p id="js-test">⏳ Testando JavaScript...</p>
+      </div>
+    </div>
+    
+    <script>
+      console.log('Teste diagnóstico iniciado');
+      document.getElementById('js-test').innerHTML = '✅ JavaScript funcionando!';
+      document.getElementById('js-test').style.color = 'green';
+      
+      // Teste de fetch para verificar se os assets podem ser carregados
+      fetch('/eagle-agencia-digital/assets/app.js')
+        .then(response => {
+          if (response.ok) {
+            console.log('✅ app.js encontrado e acessível');
+            document.getElementById('status').innerHTML += '<p style="color: green;">✅ app.js acessível</p>';
+          } else {
+            console.error('❌ app.js não encontrado. Status:', response.status);
+            document.getElementById('status').innerHTML += '<p style="color: red;">❌ app.js não encontrado (Status: ' + response.status + ')</p>';
+          }
+        })
+        .catch(error => {
+          console.error('❌ Erro ao tentar acessar app.js:', error);
+          document.getElementById('status').innerHTML += '<p style="color: red;">❌ Erro ao acessar app.js</p>';
+        });
+    </script>
+  </body>
+</html>
