@@ -35,7 +35,7 @@ const AgencySection: React.FC = () => {
                         </div>
                         <div className="lg:w-1/2">
                             <img 
-                                src="/assets/01.webp" 
+                                src="/eagle-agencia-digital/assets/01.jpeg" 
                                 alt="Barco ao pôr do sol em Alter do Chão" 
                                 className="rounded-lg shadow-2xl w-full h-auto object-cover" 
                             />
