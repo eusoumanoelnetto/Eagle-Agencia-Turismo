@@ -1,41 +1,29 @@
 import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      base: '/Eagle-Agencia-Turismo/',
-      server: {
-        port: 3000,
-        host: '0.0.0.0',
+export default defineConfig({
+  base: '/turismo/', // ESSENCIAL: define a base para a subpasta
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '.'),
+    },
+  },
+  // Opcional: se quiser nomes fixos para os assets (não obrigatório)
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name][extname]',
       },
-      build: {
-        outDir: 'dist',
-        assetsDir: 'assets',
-        rollupOptions: {
-          output: {
-            entryFileNames: 'assets/app.js',
-            chunkFileNames: 'assets/[name].js',
-            assetFileNames: 'assets/[name][extname]',
-            manualChunks: undefined,
-          }
-        },
-        sourcemap: false,
-        target: 'es2015',
-        modulePreload: {
-          polyfill: true
-        }
-      },
-      plugins: [react()],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
-      }
-    };
+    },
+  },
 });

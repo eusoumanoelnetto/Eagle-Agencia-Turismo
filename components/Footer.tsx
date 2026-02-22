@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { InstagramIcon } from './icons/InstagramIcon';
 import { FacebookIcon } from './icons/FacebookIcon';
@@ -35,11 +34,13 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Logo e Descrição */}
           <div>
-            <img 
-              src="https://blogger.googleusercontent.com/img/a/AVvXsEhXgPFQIeTNOR-nGiUs4XHw9yUrocFME3YJsXr2p6uh8kbaDHSazM_OAqX8k2NVDv1FtHBrsPFADs5cyQh5asD2AHm9KFDZ4I6FhG4hS61t5DG6iouwzest0RSbnAYLHfJxBg52XIrg-wm_ngawLug34MPlDVusjWU8omeD9KXntbRkyOeLVZUmD4V3rq8=s1600" 
-              alt="Eagle Agência Digital Logo" 
-              className="h-16 mb-4" 
-            />
+            <a href="/">
+              <img 
+                src="https://blogger.googleusercontent.com/img/a/AVvXsEhXgPFQIeTNOR-nGiUs4XHw9yUrocFME3YJsXr2p6uh8kbaDHSazM_OAqX8k2NVDv1FtHBrsPFADs5cyQh5asD2AHm9KFDZ4I6FhG4hS61t5DG6iouwzest0RSbnAYLHfJxBg52XIrg-wm_ngawLug34MPlDVusjWU8omeD9KXntbRkyOeLVZUmD4V3rq8=s1600" 
+                alt="Eagle Agência Digital Logo" 
+                className="h-16 mb-4" 
+              />
+            </a>
             <p className="text-sm text-gray-400">
               Transformando o cenário de negócios no Brasil com tecnologia, inteligência de dados e estratégias digitais validadas.
             </p>
@@ -64,6 +65,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-sm font-bold tracking-wider mb-4 pb-2 border-b border-brand-gold">NAVEGAÇÃO</h3>
             <ul className="space-y-2">
+              {/* Adicionado link "Início" */}
+              <li><a href="/" className="text-gray-400 hover:text-brand-gold transition text-sm">Início</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-brand-gold transition text-sm">Soluções</a></li>
               <li><a href="#agency" className="text-gray-400 hover:text-brand-gold transition text-sm">Sobre a Agência</a></li>
               <li><a href="#differentials" className="text-gray-400 hover:text-brand-gold transition text-sm">Nossos Diferenciais</a></li>
@@ -79,7 +82,7 @@ const Footer: React.FC = () => {
               <li><a href="#" className="text-gray-400 hover:text-brand-gold transition text-sm">Política de Privacidade</a></li>
               <li><a href="#" className="text-gray-400 hover:text-brand-gold transition text-sm">Política de Cookies</a></li>
               <li><a href="#" className="text-gray-400 hover:text-brand-gold transition text-sm">Termos de Serviço</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-brand-gold transition text-sm">Propoosta Comercial</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-brand-gold transition text-sm">Proposta Comercial</a></li>
             </ul>
           </div>
 
